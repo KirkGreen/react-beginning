@@ -3,18 +3,15 @@ import '../css/styles.css'
 
 class Header extends Component{
 
-    inputChangeHandler(){
-        console.log('I was clicked')
+    inputChangeHandler(event){
+        console.log(event.target.value)
     }
 
     render(){
         return (
             <header>
-                <div
-                    className="logo"
-                    onClick={this.inputChangeHandler}
-                    >Logo</div>
-                <input type="text"/>
+                <div className="logo">Logo</div>
+                <input type="text" onChange={this.inputChangeHandler}/>
             </header>
         )
     }
