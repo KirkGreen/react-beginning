@@ -4,6 +4,7 @@ import '../css/styles.css'
 class Header extends Component{
 
     state = {
+        title:'The keywords are:',
         keywords:"Hello!"
     };
 
@@ -20,6 +21,8 @@ class Header extends Component{
             <header>
                 <div className="logo">Logo</div>
                 <input type="text" onChange={this.inputChangeHandler}/>
+                <div>{this.state.title}</div>
+                <div>{this.state.keywords}</div>
             </header>
         )
     }
