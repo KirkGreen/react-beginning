@@ -1,11 +1,11 @@
 import React,{ Component } from 'react';
-import '../css/styles.css'
+import classes from '../css/styles.css'
 
 class Header extends Component{
 
-    state = {
-        keywords:"Hello!"
-    };
+    // state = {
+    //     keywords:"Hello!"
+    // };
 
     inputChangeHandler = (event) => {
         this.setState({
@@ -16,7 +16,7 @@ class Header extends Component{
     render(){
         return (
             <header>
-                <div className="logo">Logo</div>
+                <div className={classes.logo}>Logo</div>
                 <input type="text" onChange={this.inputChangeHandler}/>
             </header>
         )
